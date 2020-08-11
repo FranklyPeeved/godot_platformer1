@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+# HELLO comment from Richard
+
 var velocity = Vector2(0,0)
 var jump_timer = 0
 
