@@ -43,7 +43,6 @@ __meta__ = {
 }
 
 [node name="alien_pink" parent="player" instance=ExtResource( 2 )]
-frame = 1
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="player"]
