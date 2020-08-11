@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://characters/aliens/alien_pink.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://characters/enemies/bee.tscn" type="PackedScene" id=4]
 [ext_resource path="res://tilesets/abstract_tileset.tres" type="TileSet" id=5]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://HUD.gd" type="Script" id=8]
 [ext_resource path="res://interface/fonts/kenvector_future_32.tres" type="DynamicFont" id=9]
 [ext_resource path="res://backgrounds/backgroundColorDesert.png" type="Texture" id=10]
@@ -195,6 +196,9 @@ custom_fonts/font = ExtResource( 9 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "JUMP"
+
+[node name="node_2d" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1211.86, 79.7499 )
 [connection signal="pressed" from="HUD/left_button" to="HUD" method="_on_left_button_pressed"]
 [connection signal="released" from="HUD/left_button" to="HUD" method="_on_left_button_released"]
 [connection signal="pressed" from="HUD/right_button" to="HUD" method="_on_right_button_pressed"]

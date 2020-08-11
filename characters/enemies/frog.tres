@@ -7,13 +7,13 @@
 [resource]
 resource_name = "frog"
 animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.5
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "dead",
 "speed": 1.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "idle",
-"speed": 4.0
 } ]
