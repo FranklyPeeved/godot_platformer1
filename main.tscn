@@ -96,6 +96,9 @@ position = Vector2( 523, 124 )
 
 [node name="enemies" type="Node2D" parent="."]
 
+[node name="node_2d" parent="enemies" instance=ExtResource( 7 )]
+position = Vector2( 259.092, 198.472 )
+
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 8 )
 

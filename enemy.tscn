@@ -1,10 +1,30 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/enemies/frog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemy.gd" type="Script" id=2]
+[ext_resource path="res://audio/digital_sfx/source/pepSound3.ogg" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26.8724, 24.5817 )
+
+[sub_resource type="AudioStreamRandomPitch" id=2]
+audio_stream = ExtResource( 3 )
 
 [node name="node_2d" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="frog" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3, -4.79979 )
 frame = 1
 playing = true
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+position = Vector2( 2.89542, -5.34539 )
+shape = SubResource( 1 )
+
+[node name="pepSound3" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 2 )
+
+[node name="visibility_enabler_2d" type="VisibilityEnabler2D" parent="."]
+process_parent = true
+physics_process_parent = true
