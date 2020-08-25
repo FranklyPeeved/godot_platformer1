@@ -28,11 +28,17 @@ extents = Vector2( 150, 100 )
 [node name="parallax_background" type="ParallaxBackground" parent="."]
 
 [node name="parallax_layer" type="ParallaxLayer" parent="parallax_background"]
+position = Vector2( 1, 0 )
 motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 1024, 1024 )
 
 [node name="backgroundColorDesert" type="Sprite" parent="parallax_background/parallax_layer"]
-position = Vector2( 515.358, -0.600006 )
+visible = false
+position = Vector2( -188.484, 317.285 )
+texture = ExtResource( 10 )
+
+[node name="backgroundColorDesert2" type="Sprite" parent="parallax_background/parallax_layer"]
+position = Vector2( 542.716, 151.803 )
 texture = ExtResource( 10 )
 
 [node name="player" type="KinematicBody2D" parent="."]
