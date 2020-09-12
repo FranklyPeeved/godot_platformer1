@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 var direction = Vector2.LEFT
 var velocity = Vector2(-50, 0)
+var timer = 0
+export var TURNING_TIME = 3
 
 func _ready():
 	set_physics_process(false)
@@ -10,9 +12,13 @@ func _physics_process(delta):
 	velocity.y += 20
 	velocity.x = direction.x * 50
 	velocity = move_and_slide(velocity, Vector2.UP)
+		
+	timer = timer + delta
+	#print(timer)
 	
-	if is_on_wall():
+	if timer >  TURNING_TIME or is_on_wall():
 		direction = -direction
+		timer = 0
 		
 	for i in get_slide_count():
 		var collider = get_slide_collision(i).collider

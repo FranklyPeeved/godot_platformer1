@@ -24,6 +24,7 @@ radius = 23.984
 extents = Vector2( 150, 100 )
 
 [node name="main" type="Node2D"]
+position = Vector2( 16, 0 )
 
 [node name="parallax_background" type="ParallaxBackground" parent="."]
 
@@ -50,6 +51,7 @@ __meta__ = {
 }
 
 [node name="alien_pink" parent="player" instance=ExtResource( 2 )]
+frame = 1
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="player"]
@@ -98,6 +100,15 @@ position = Vector2( 523, 124 )
 
 [node name="node_2d" parent="enemies" instance=ExtResource( 7 )]
 position = Vector2( 259.092, 198.472 )
+
+[node name="node_2d2" parent="enemies" instance=ExtResource( 7 )]
+position = Vector2( 1211.86, 79.7499 )
+
+[node name="node_2d3" parent="enemies" instance=ExtResource( 7 )]
+position = Vector2( 1903.41, 167.431 )
+
+[node name="node_2d4" parent="enemies" instance=ExtResource( 7 )]
+position = Vector2( 2723.65, 167.431 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 8 )
@@ -205,9 +216,6 @@ custom_fonts/font = ExtResource( 9 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "JUMP"
-
-[node name="node_2d" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1211.86, 79.7499 )
 [connection signal="pressed" from="HUD/left_button" to="HUD" method="_on_left_button_pressed"]
 [connection signal="released" from="HUD/left_button" to="HUD" method="_on_left_button_released"]
 [connection signal="pressed" from="HUD/right_button" to="HUD" method="_on_right_button_pressed"]
