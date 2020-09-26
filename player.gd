@@ -42,8 +42,14 @@ func _physics_process(delta):
 		var collider = get_slide_collision(i).collider
 		if collider.has_method("kill"):
 			if position.y < collider.position.y - 10:
-				velocity.y = -400
+				velocity.y = -600
 				collider.kill()
 
 func kill():
 	get_tree().reload_current_scene()
+
+
+func _on_winflag_body_entered(body):
+	if body == self:
+		get_tree().change_scene("res://winningscreen.tscn")
+

@@ -4,12 +4,14 @@ var direction = Vector2.LEFT
 var velocity = Vector2(-50, 0)
 var timer = 0
 export var TURNING_TIME = 3
+export var JUMP_HEIGHT=500
+export var GRAVITY=20
 
 func _ready():
 	set_physics_process(false)
 
 func _physics_process(delta):
-	velocity.y += 20
+	velocity.y += GRAVITY
 	velocity.x = direction.x * 50
 	velocity = move_and_slide(velocity, Vector2.UP)
 		
@@ -31,3 +33,9 @@ func kill():
 	$frog.animation = 'dead'
 	$collision_shape_2d.disabled = true
 	get_node("/root/main/HUD").inc_score()
+	GRAVITY=20
+
+
+func _on_frog_frame_changed():
+	if $frog.frame == 1:
+		velocity.y = -JUMP_HEIGHT

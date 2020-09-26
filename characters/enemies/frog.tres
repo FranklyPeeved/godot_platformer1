@@ -10,7 +10,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
-"speed": 1.5
+"speed": 0.5
 }, {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,

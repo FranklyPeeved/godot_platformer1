@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var score = 0
+var timer = 0
 
 func inc_score():
 	set_score(score + 1)
@@ -29,3 +30,9 @@ func _on_jump_button_released():
 
 
 
+
+
+func _on_timer_timeout():
+	timer = timer + 1
+	print(timer)
+	$time.set_text(str(timer))

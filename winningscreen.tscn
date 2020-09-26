@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://winningscreen.gd" type="Script" id=1]
+[ext_resource path="res://interface/fonts/kenvector_future_32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://interface/fonts/kenvector_future_20.tres" type="DynamicFont" id=3]
+
+[node name="winningscreen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="color_rect" type="ColorRect" parent="."]
+margin_left = 16.0356
+margin_top = -682.509
+margin_right = 1702.04
+margin_bottom = 590.491
+color = Color( 0.568627, 0.14902, 0.14902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label3" type="Label" parent="."]
+margin_left = 437.909
+margin_top = 246.546
+margin_right = 606.909
+margin_bottom = 311.546
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "YOU WIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="Button" parent="."]
+margin_left = 448.153
+margin_top = 358.099
+margin_right = 570.153
+margin_bottom = 416.099
+custom_fonts/font = ExtResource( 3 )
+text = "restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]

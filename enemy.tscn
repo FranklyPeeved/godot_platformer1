@@ -10,12 +10,11 @@ extents = Vector2( 26.8724, 24.5817 )
 [sub_resource type="AudioStreamRandomPitch" id=2]
 audio_stream = ExtResource( 3 )
 
-[node name="node_2d" type="KinematicBody2D"]
+[node name="enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="frog" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3, -4.79979 )
-frame = 1
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
@@ -28,3 +27,4 @@ stream = SubResource( 2 )
 [node name="visibility_enabler_2d" type="VisibilityEnabler2D" parent="."]
 process_parent = true
 physics_process_parent = true
+[connection signal="frame_changed" from="frog" to="." method="_on_frog_frame_changed"]
