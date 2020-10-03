@@ -45,11 +45,19 @@ func _physics_process(delta):
 				velocity.y = -600
 				collider.kill()
 
+var respawn_position = Vector2(200,250)
+
 func kill():
-	get_tree().reload_current_scene()
+	position = respawn_position
 
 
 func _on_winflag_body_entered(body):
 	if body == self:
 		get_tree().change_scene("res://winningscreen.tscn")
 
+
+
+func _on_redflag_body_entered(body):
+	print("respawn point")
+	if body == self:
+		respawn_position = position
