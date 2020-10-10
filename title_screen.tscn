@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface/fonts/kenvector_future_32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://title_screen.gd" type="Script" id=2]
+
+[node name="title_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.4757
+margin_top = -2.11893
+margin_right = -12.4757
+margin_bottom = -2.1189
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+margin_left = 316.0
+margin_top = 89.0
+margin_right = 356.0
+margin_bottom = 103.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "space adventures"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="Button" parent="."]
+margin_left = 398.0
+margin_top = 274.0
+margin_right = 606.0
+margin_bottom = 346.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2" type="Button" parent="."]
+margin_left = 396.0
+margin_top = 450.0
+margin_right = 604.0
+margin_bottom = 522.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]

@@ -4,6 +4,7 @@ extends KinematicBody2D
 
 var velocity = Vector2(0,0)
 var jump_timer = 0
+var lives = 3
 
 func _physics_process(delta):
 	if is_on_floor():
@@ -49,6 +50,10 @@ var respawn_position = Vector2(200,250)
 
 func kill():
 	position = respawn_position
+	lives = lives - 1
+	if lives == 0:
+		get_tree().change_scene("res://title_screen.tscn")
+
 
 
 func _on_winflag_body_entered(body):

@@ -35,4 +35,13 @@ func _on_jump_button_released():
 func _on_timer_timeout():
 	timer = timer + 1
 	print(timer)
-	$time.set_text(str(timer))
+	$time.set_text(convertSecondsToClock(timer))
+	
+func convertSecondsToClock(time):
+	var minutes = str(time/60)
+	var seconds = str(time % 60)
+	if time % 60 < 10:
+		seconds = "0"+seconds
+	if time/60 < 10:
+		minutes = "0"+minutes
+	return minutes + ":" + seconds
