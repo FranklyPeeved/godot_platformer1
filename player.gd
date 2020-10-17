@@ -51,9 +51,13 @@ var respawn_position = Vector2(200,250)
 func kill():
 	position = respawn_position
 	lives = lives - 1
+	get_node("../HUD//lives").text = str(lives)
 	if lives == 0:
 		get_tree().change_scene("res://title_screen.tscn")
 
+func inc_lives():
+	lives = lives + 1
+	get_node("../HUD//lives").text = str(lives)
 
 
 func _on_winflag_body_entered(body):
