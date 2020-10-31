@@ -12,14 +12,24 @@ var names = ["john", "fred", "richard"]
 func _ready():
 	var text=""
 	for i in range(scores.size()):
-		text = text + names[i]
+		text = text + pad_name(names[i])
 		text = text + " " + str(scores[i])
 		text = text + '\n'
 		
 	print(text)
 	$leaderboard.text = text
 
+func pad_name(name):
+	var x
+	x = 10 - len(name)
+	for i in range (x):
+		name = name + " "
+	return name
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_button2_pressed():
+	get_tree().change_scene("res://title_screen.tscn")

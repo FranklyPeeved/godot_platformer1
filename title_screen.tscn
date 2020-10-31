@@ -6,35 +6,46 @@
 [node name="title_screen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -12.4757
-margin_top = -2.11893
-margin_right = -12.4757
-margin_bottom = -2.1189
+margin_left = -3.99999
+margin_top = -4.23783
+margin_right = -4.0
+margin_bottom = -4.23779
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label" type="Label" parent="."]
-margin_left = 316.0
+margin_left = 356.26
 margin_top = 89.0
-margin_right = 356.0
-margin_bottom = 103.0
+margin_right = 660.26
+margin_bottom = 126.0
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "space adventures"
+text = "Space Adventures"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="button" type="Button" parent="."]
 margin_left = 398.0
-margin_top = 274.0
+margin_top = 214.67
 margin_right = 606.0
-margin_bottom = 346.0
+margin_bottom = 286.67
 custom_fonts/font = ExtResource( 1 )
 text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button3" type="Button" parent="."]
+margin_left = 389.524
+margin_top = 331.211
+margin_right = 610.524
+margin_bottom = 403.211
+custom_fonts/font = ExtResource( 1 )
+text = "leaderboard"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,4 +61,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]

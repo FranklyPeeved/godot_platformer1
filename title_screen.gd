@@ -22,3 +22,7 @@ func _on_button_pressed():
 
 func _on_button2_pressed():
 	get_tree().quit()
+
+
+func _on_button3_pressed():
+	get_tree().change_scene("res://scoreboard.tscn")
