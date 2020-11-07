@@ -1,14 +1,14 @@
 extends CanvasLayer
 
-var score = 0
+
 var timer = 0
 
 func inc_score():
-	set_score(score + 1)
+	set_score(Globals.score + 1)
 	
 func set_score(s):
-	score = s
-	$score.set_text(str(score))
+	Globals.score = s
+	$score.set_text(str(Globals.score))
 
 func _on_left_button_pressed():
 	Input.action_press("left")

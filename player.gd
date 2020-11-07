@@ -53,7 +53,7 @@ func kill():
 	lives = lives - 1
 	get_node("../HUD//lives").text = str(lives)
 	if lives == 0:
-		get_tree().change_scene("res://title_screen.tscn")
+		get_tree().change_scene("res://gameover.tscn")
 
 func inc_lives():
 	lives = lives + 1

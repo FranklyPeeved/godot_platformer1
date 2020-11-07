@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface/fonts/kenvector_future_32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://gameover.gd" type="Script" id=2]
+
+[node name="control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -2.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+margin_left = 435.33
+margin_top = 155.854
+margin_right = 638.33
+margin_bottom = 207.854
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="."]
+margin_left = 382.357
+margin_top = 272.395
+margin_right = 667.357
+margin_bottom = 324.395
+custom_fonts/font = ExtResource( 1 )
+text = "Enter Your Name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_edit" type="LineEdit" parent="."]
+anchor_right = 0.116
+anchor_bottom = 0.12
+margin_left = 416.643
+margin_top = 350.0
+margin_right = 536.091
+margin_bottom = 347.76
+custom_fonts/font = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_entered" from="line_edit" to="." method="_on_line_edit_text_entered"]

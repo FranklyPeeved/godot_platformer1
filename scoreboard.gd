@@ -1,7 +1,6 @@
 extends Control
 
-var scores = [5, 10, 20]
-var names = ["john", "fred", "richard"]
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,9 +10,9 @@ var names = ["john", "fred", "richard"]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var text=""
-	for i in range(scores.size()):
-		text = text + pad_name(names[i])
-		text = text + " " + str(scores[i])
+	for i in range(Globals.scores.size()):
+		text = text + pad_name(Globals.names[i])
+		text = text + " " + str(Globals.scores[i])
 		text = text + '\n'
 		
 	print(text)
