@@ -32,3 +32,8 @@ func pad_name(name):
 
 func _on_button2_pressed():
 	get_tree().change_scene("res://title_screen.tscn")
+
+
+func _on_button3_pressed():
+	Globals.reset()
+	_ready()

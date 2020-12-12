@@ -16,10 +16,10 @@ __meta__ = {
 }
 
 [node name="label" type="Label" parent="."]
-margin_left = 345.665
-margin_top = 97.4757
-margin_right = 642.665
-margin_bottom = 133.476
+margin_left = 381.687
+margin_top = 99.5947
+margin_right = 678.687
+margin_bottom = 136.595
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -51,4 +51,22 @@ text = "back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="button3" type="Button" parent="."]
+margin_left = 385.405
+margin_top = 375.837
+margin_right = 593.405
+margin_bottom = 447.837
+custom_fonts/font = ExtResource( 2 )
+text = "reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="."]
+margin_left = -779.864
+margin_top = 164.75
+margin_right = -542.864
+margin_bottom = 235.75
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]

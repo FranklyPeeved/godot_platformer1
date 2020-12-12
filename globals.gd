@@ -1,7 +1,7 @@
 extends Node
 
-var scores = [5, 10]
-var names = ["Michael", "Richard"]
+var scores = [99]
+var names = ["Michael"]
 var score = 0
 
 func _init():
@@ -25,4 +25,21 @@ func load_scores():
 		names = file.get_var()
 		scores = file.get_var()
 	file.close()
+	bubble_sort()
 	
+func reset():
+	scores = []
+	names = []
+	save_scores()
+	
+func bubble_sort():
+	for passnum in range(len(scores)-1,0,-1):
+		for i in range(passnum):
+			if scores[i]<scores[i+1]:
+				var temp = scores[i]
+				scores[i] = scores[i+1]
+				scores[i+1] = temp
+				temp = names[i]
+				names[i] = names[i+1]
+				names[i+1] = temp
+
