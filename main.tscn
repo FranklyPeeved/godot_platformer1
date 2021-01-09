@@ -284,10 +284,10 @@ __meta__ = {
 }
 
 [node name="left_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
 position = Vector2( 150, 500 )
 shape = SubResource( 3 )
+shape_centered = false
 passby_press = true
 visibility_mode = 1
 __meta__ = {
@@ -300,6 +300,9 @@ margin_top = -100.0
 margin_right = 150.0
 margin_bottom = 100.0
 color = Color( 0, 0, 1, 0.486275 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="label2" type="Label" parent="HUD/left_button"]
 margin_left = -50.0
@@ -312,10 +315,10 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "LEFT"
 
 [node name="right_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
 position = Vector2( 480, 500 )
 shape = SubResource( 3 )
+shape_centered = false
 passby_press = true
 visibility_mode = 1
 __meta__ = {
@@ -340,10 +343,10 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "RIGHT"
 
 [node name="jump_button" type="TouchScreenButton" parent="HUD"]
-visible = false
 self_modulate = Color( 1, 1, 1, 0.54902 )
 position = Vector2( 870, 500 )
 shape = SubResource( 3 )
+shape_centered = false
 passby_press = true
 visibility_mode = 1
 __meta__ = {
