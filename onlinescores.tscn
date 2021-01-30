@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://onlinescores.gd" type="Script" id=1]
+[ext_resource path="res://interface/fonts/kenvector_future_32.tres" type="DynamicFont" id=2]
+
+[node name="onlinescores" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.4757
+margin_top = -2.11893
+margin_right = -12.4757
+margin_bottom = -2.1189
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+margin_left = 381.687
+margin_top = 99.5947
+margin_right = 678.687
+margin_bottom = 136.595
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "leaderboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="leaderboard" type="Label" parent="."]
+margin_left = 208.0
+margin_top = 180.0
+margin_right = 831.0
+margin_bottom = 438.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "empty"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2" type="Button" parent="."]
+margin_left = 383.286
+margin_top = 473.308
+margin_right = 591.286
+margin_bottom = 545.308
+custom_fonts/font = ExtResource( 2 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button3" type="Button" parent="."]
+margin_left = 385.405
+margin_top = 375.837
+margin_right = 593.405
+margin_bottom = 447.837
+custom_fonts/font = ExtResource( 2 )
+text = "reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label2" type="Label" parent="."]
+margin_left = -779.864
+margin_top = 164.75
+margin_right = -542.864
+margin_bottom = 235.75
+
+[node name="http_request" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]
+[connection signal="request_completed" from="http_request" to="." method="_on_http_request_request_completed"]

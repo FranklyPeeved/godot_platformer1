@@ -46,4 +46,7 @@ custom_fonts/font = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="http_request" type="HTTPRequest" parent="."]
 [connection signal="text_entered" from="line_edit" to="." method="_on_line_edit_text_entered"]
+[connection signal="request_completed" from="http_request" to="." method="_on_http_request_request_completed"]

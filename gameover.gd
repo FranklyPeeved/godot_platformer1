@@ -21,4 +21,11 @@ func _on_line_edit_text_entered(new_text):
 	Globals.names.append(new_text)
 	Globals.scores.append(Globals.score)
 	Globals.save_scores()
-	get_tree().change_scene("res://scoreboard.tscn")
+	var url = "http://dreamlo.com/lb/prdd8D1dfEiPzmHRc_Kt4Q3DCauo0KUEqL07PHdniISg/add/"+new_text+"/"+str(Globals.score)
+	print(url)
+	$http_request.request(url)
+	get_tree().change_scene("res://onlinescores.tscn")
+
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	print(result, response_code)
