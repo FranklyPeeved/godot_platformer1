@@ -12,11 +12,18 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	var json = JSON.parse(body.get_string_from_utf8())
 	var r = json.result["dreamlo"]["leaderboard"]["entry"]
 	print(r)
-	
 	var text=""
+	
+	
+
 	for element in r:
-		text = text + pad_name(str(element["name"])) + str(element["score"])
-		text = text + '\n'
+		print("ELEMENT ",element)
+		if element is String:
+			print("shouldnt be a string, only 1 score?")
+			text="Need more scores"
+		else:
+			text = text + pad_name(str(element["name"])) + str(element["score"])
+			text = text + '\n'
 	
 	$leaderboard.text = text
 
@@ -26,3 +33,7 @@ func pad_name(name):
 	for i in range (x):
 		name = name + " "
 	return name
+
+
+func _on_button2_pressed():
+	get_tree().change_scene("res://title_screen.tscn")

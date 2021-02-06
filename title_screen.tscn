@@ -8,9 +8,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -3.99999
-margin_top = -4.23783
+margin_top = -6.23783
 margin_right = -4.0
-margin_bottom = -4.23779
+margin_bottom = -6.23779
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,12 +41,23 @@ __meta__ = {
 }
 
 [node name="button3" type="Button" parent="."]
-margin_left = 389.524
+margin_left = 243.524
 margin_top = 331.211
-margin_right = 610.524
+margin_right = 464.524
 margin_bottom = 403.211
 custom_fonts/font = ExtResource( 1 )
 text = "leaderboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4" type="Button" parent="."]
+margin_left = 551.524
+margin_top = 327.211
+margin_right = 810.524
+margin_bottom = 399.211
+custom_fonts/font = ExtResource( 1 )
+text = "online scores"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,4 +78,5 @@ stream = ExtResource( 3 )
 autoplay = true
 [connection signal="pressed" from="button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]
+[connection signal="pressed" from="button4" to="." method="_on_button4_pressed"]
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]

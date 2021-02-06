@@ -48,5 +48,6 @@ __meta__ = {
 }
 
 [node name="http_request" type="HTTPRequest" parent="."]
+timeout = 5
 [connection signal="text_entered" from="line_edit" to="." method="_on_line_edit_text_entered"]
 [connection signal="request_completed" from="http_request" to="." method="_on_http_request_request_completed"]

@@ -28,3 +28,7 @@ func _on_button3_pressed():
 	get_tree().change_scene("res://scoreboard.tscn")
 	
 	
+
+
+func _on_button4_pressed():
+	 get_tree().change_scene("res://onlinescores.tscn")

@@ -16,14 +16,15 @@ __meta__ = {
 }
 
 [node name="label" type="Label" parent="."]
-margin_left = 381.687
-margin_top = 99.5947
-margin_right = 678.687
-margin_bottom = 136.595
+margin_left = 332.299
+margin_top = 45.7165
+margin_right = 674.299
+margin_bottom = 122.716
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "leaderboard"
+text = "online leaderboard
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,17 +53,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="button3" type="Button" parent="."]
-margin_left = 385.405
-margin_top = 375.837
-margin_right = 593.405
-margin_bottom = 447.837
-custom_fonts/font = ExtResource( 2 )
-text = "reset"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="label2" type="Label" parent="."]
 margin_left = -779.864
 margin_top = 164.75
@@ -71,5 +61,4 @@ margin_bottom = 235.75
 
 [node name="http_request" type="HTTPRequest" parent="."]
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
-[connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]
 [connection signal="request_completed" from="http_request" to="." method="_on_http_request_request_completed"]
