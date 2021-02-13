@@ -21,7 +21,9 @@ func _on_line_edit_text_entered(new_text):
 	Globals.names.append(new_text)
 	Globals.scores.append(Globals.score)
 	Globals.save_scores()
-	var url = "http://dreamlo.com/lb/prdd8D1dfEiPzmHRc_Kt4Q3DCauo0KUEqL07PHdniISg/add/"+new_text.percent_encode()+"/"+str(Globals.score)
+	var url = "http://dreamlo.com/lb/prdd8D1dfEiPzmHRc_Kt4Q3DCauo0KUEqL07PHdniISg/add/"
+	url += new_text.percent_encode()+"/"+str(Globals.score)
+	url += "/"+str(Globals.timer)
 	print(url)
 	$http_request.request(url)
 	

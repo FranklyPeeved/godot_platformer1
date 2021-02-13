@@ -22,8 +22,11 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 			print("shouldnt be a string, only 1 score?")
 			text="Need more scores"
 		else:
-			text = text + pad_name(str(element["name"])) + str(element["score"])
+			text = text + pad_name(str(element["name"]))
+			text = text + pad_name(str(element["score"]))
+			text = text + pad_name(str(element["seconds"]))
 			text = text + '\n'
+			print(text)
 	
 	$leaderboard.text = text
 

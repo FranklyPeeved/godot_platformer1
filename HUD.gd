@@ -1,8 +1,6 @@
 extends CanvasLayer
 
 
-var timer = 0
-
 func inc_score():
 	set_score(Globals.score + 1)
 	
@@ -33,9 +31,9 @@ func _on_jump_button_released():
 
 
 func _on_timer_timeout():
-	timer = timer + 1
-	print(timer)
-	$time.set_text(convertSecondsToClock(timer))
+	Globals.timer = Globals.timer + 1
+	print(Globals.timer)
+	$time.set_text(convertSecondsToClock(Globals.timer))
 	
 func convertSecondsToClock(time):
 	var minutes = str(time/60)

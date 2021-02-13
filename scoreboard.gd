@@ -11,9 +11,9 @@ extends Control
 func _ready():
 	var text=""
 	for i in range(Globals.scores.size()):
-		text = text + pad_name(Globals.names[i])
-		text = text + " " + str(Globals.scores[i])
-		text = text + '\n'
+		text += pad_name(Globals.names[i])
+		text += " " + str(Globals.scores[i])
+		text += '\n'
 		
 	print(text)
 	$leaderboard.text = text

@@ -3,6 +3,7 @@ extends Node
 var scores = [99]
 var names = ["Michael"]
 var score = 0
+var timer = 0
 
 func _init():
 	print("loading")
