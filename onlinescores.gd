@@ -40,3 +40,17 @@ func pad_name(name):
 
 func _on_button2_pressed():
 	get_tree().change_scene("res://title_screen.tscn")
+
+
+func _on_button_pressed():
+	print("pressed")
+
+var scroll = 0
+
+func _on_button_button_down():
+	scroll += 1
+	print("down ", scroll)
+
+
+func _on_button3_button_down():
+	print("up ", scroll)

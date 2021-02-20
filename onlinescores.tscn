@@ -43,10 +43,10 @@ __meta__ = {
 }
 
 [node name="button2" type="Button" parent="."]
-margin_left = 383.286
-margin_top = 473.308
-margin_right = 591.286
-margin_bottom = 545.308
+margin_left = 764.923
+margin_top = 471.063
+margin_right = 972.923
+margin_bottom = 543.063
 custom_fonts/font = ExtResource( 2 )
 text = "back"
 __meta__ = {
@@ -60,5 +60,30 @@ margin_right = -542.864
 margin_bottom = 235.75
 
 [node name="http_request" type="HTTPRequest" parent="."]
+
+[node name="button" type="Button" parent="."]
+margin_left = 763.0
+margin_top = 217.0
+margin_right = 981.0
+margin_bottom = 293.0
+custom_fonts/font = ExtResource( 2 )
+text = "UP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button3" type="Button" parent="."]
+margin_left = 766.0
+margin_top = 298.0
+margin_right = 980.0
+margin_bottom = 380.0
+custom_fonts/font = ExtResource( 2 )
+text = "down"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
 [connection signal="request_completed" from="http_request" to="." method="_on_http_request_request_completed"]
+[connection signal="button_down" from="button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="button3" to="." method="_on_button3_button_down"]

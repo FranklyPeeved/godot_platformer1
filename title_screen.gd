@@ -9,6 +9,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.score = 0
+	Globals.timer = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

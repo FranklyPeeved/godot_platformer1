@@ -26,7 +26,17 @@ func _on_jump_button_pressed():
 func _on_jump_button_released():
 	Input.action_release("jump")
 
+func _ready():
 
+	if OS.get_name() == "iOS":
+		print ("you are on iOS")
+	elif OS.get_name() == "Android":
+		print ("you are on Android")
+	else:
+		print ("you are not on iOS")
+		$left_button.hide()
+		$right_button.hide()
+		$jump_button.hide()
 
 
 
