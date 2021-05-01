@@ -68,5 +68,6 @@ margin_left = -779.864
 margin_top = 164.75
 margin_right = -542.864
 margin_bottom = 235.75
+
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
 [connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]

@@ -32,6 +32,8 @@ func _ready():
 		print ("you are on iOS")
 	elif OS.get_name() == "Android":
 		print ("you are on Android")
+	elif Globals.touch_controls:
+		print("touch controls enabled")	
 	else:
 		print ("you are not on iOS")
 		$left_button.hide()

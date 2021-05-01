@@ -65,12 +65,23 @@ __meta__ = {
 }
 
 [node name="button2" type="Button" parent="."]
-margin_left = 396.0
-margin_top = 450.0
-margin_right = 604.0
-margin_bottom = 522.0
+margin_left = 582.466
+margin_top = 456.357
+margin_right = 790.466
+margin_bottom = 528.357
 custom_fonts/font = ExtResource( 1 )
 text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button5" type="Button" parent="."]
+margin_left = 245.556
+margin_top = 456.357
+margin_right = 453.556
+margin_bottom = 528.357
+custom_fonts/font = ExtResource( 1 )
+text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -78,7 +89,9 @@ __meta__ = {
 [node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
+
 [connection signal="pressed" from="button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="button3" to="." method="_on_button3_pressed"]
 [connection signal="pressed" from="button4" to="." method="_on_button4_pressed"]
 [connection signal="pressed" from="button2" to="." method="_on_button2_pressed"]
+[connection signal="pressed" from="button5" to="." method="_on_button5_pressed"]

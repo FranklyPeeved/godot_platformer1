@@ -33,3 +33,7 @@ func _on_button3_pressed():
 
 func _on_button4_pressed():
 	 get_tree().change_scene("res://onlinescores.tscn")
+
+
+func _on_button5_pressed():
+	get_tree().change_scene("res://options.tscn")
